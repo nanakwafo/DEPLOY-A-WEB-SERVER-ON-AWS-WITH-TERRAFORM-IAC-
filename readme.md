@@ -1,7 +1,7 @@
 
 # DEPLOY A WEB SERVER ON AWS WITH TERRAFORM(IAC)
 
-This terraform file provision the below resources a web server on AWS
+This terraform file provision the below resources a web server on AWS.it helps to safely deploy infrastructure
 
 - VPC
 - Create Internet Gateway
@@ -14,7 +14,7 @@ This terraform file provision the below resources a web server on AWS
 - Create Ubuntu Server and install/enable apache2
 
 
-## Pre-requisites
+## SetUp
 - Install Terraform on mac
  ```
  brew install terraform
@@ -24,3 +24,22 @@ This terraform file provision the below resources a web server on AWS
 ```
 terraform -v
 ```
+- Setup your AWS access keys with the command Below
+```
+aws configure
+```
+- Create a Key-Pair from aws console.The key-pair used for this project is main-key with the .pem extension.Ensure this key is downloaded
+
+## Resources
+- https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc
+## Deployment
+
+To deploy this project run
+
+```bash
+  terraform plan  
+```
+```bash
+  terraform apply
+```
+
